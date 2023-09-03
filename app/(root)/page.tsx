@@ -2,19 +2,22 @@
 
 import Navbar from "@/components/navbar";
 import { Modal } from "@/components/ui/modal";
+import { useStoreModal } from "@/hooks/use-store-modal";
+import { useEffect } from "react";
 
 export default function Home() {
+  const onOpen = useStoreModal((state) => state.onOpen);
+  const isOpen = useStoreModal((state) => state.isOpen);
+
+  useEffect(() => {
+    if (!isOpen) {
+      onOpen();
+    }
+  }, [isOpen, onOpen]);
+
   return (
     <>
-      <Modal
-        title="Test"
-        description="test desc"
-        isOpen={true}
-        onClose={() => {}}
-      >
-        Children
-      </Modal>
-      {/* <Navbar /> */}
+      <Navbar />
     </>
   );
 }
