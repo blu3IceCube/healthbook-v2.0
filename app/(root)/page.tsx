@@ -1,6 +1,20 @@
+"use client";
+
 import Navbar from "@/components/navbar";
-import { UserButton } from "@clerk/nextjs";
+import { Modal } from "@/components/ui/modal";
 
 export default function Home() {
-  return <Navbar />;
+  return (
+    <>
+      <Modal
+        title="Test"
+        description="test desc"
+        isOpen={true}
+        onClose={() => {}}
+      >
+        Children
+      </Modal>
+      {/* <Navbar /> */}
+    </>
+  );
 }
