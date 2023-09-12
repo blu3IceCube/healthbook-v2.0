@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <>
-      <div>root page</div>
+      <div>Root page.</div>
     </>
   );
 }
