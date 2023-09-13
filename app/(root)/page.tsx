@@ -9,6 +9,7 @@ import { Upload } from "lucide-react";
 import { useEffect } from "react";
 import { redirect } from "next/navigation";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function Home() {
   const router = useRouter();
@@ -18,14 +19,13 @@ export default function Home() {
       <div className="m-auto w-9/12">
         <div className="flex items-center justify-between mt-12 mb-2">
           <h1 className="text-xl font-medium text-gray-500">Your files</h1>
-          <Button
+          <Link
             className="flex items-center justify-between gap-4 text-xl font-medium text-gray-500"
-            onClick={() => router.push("/upload")}
-            variant="ghost"
+            href="/upload"
           >
             <Upload />
             Upload
-          </Button>
+          </Link>
         </div>
         <Separator className="bg-gray-400" />
       </div>
