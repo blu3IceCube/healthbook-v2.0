@@ -8,12 +8,9 @@ import { useStoreModal } from "@/hooks/use-store-modal";
 import { Upload } from "lucide-react";
 import { useEffect } from "react";
 import { redirect } from "next/navigation";
-import { useRouter } from "next/router";
 import Link from "next/link";
 
 export default function Home() {
-  const router = useRouter();
-
   return (
     <>
       <div className="m-auto w-9/12">
